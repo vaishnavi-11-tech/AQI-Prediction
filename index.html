@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--    <link rel="stylesheet" href="result.css">-->
+    <style>
+        body{
+  background:url('https://thumbs.dreamstime.com/z/air-quality-index-concept-knob-button-air-quality-index-concept-knob-button-changing-speed-g-to-g-reverse-217530469.jpg') no-repeat center center/cover;
+}
+.form{
+  display:flex;
+  flex-direction: column;
+  height: 700px;
+  width: 500px;
+  border: 1px solid black;
+  align-items: center;
+  margin: auto;
+  margin-top: 50px;
+  background-color:rgba(0,0,0,0.5);
+  box-shadow: inset -5px -5px rgba(0,0,0,0.5);
+  border-radius: 25px;
+}
+.form h1{
+  color: white;
+  font-size: 2rem;
+  border-bottom: 4px solid rgba(255,255,255,0.5);
+  margin: 50px;
+}
+.form p{
+  color:white;
+  font-size:2rem;
+}
+.form br{
+  color:white;
+  font-size:2rem;
+}
+.box{
+  padding: 12px;
+  margin: 20px;
+  width: 65%;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  background-color: rgba(0,0,0,0.5);
+  box-shadow: inset -3px -3px rgba(0,0,0,0.5);
+  color: white;
+  font-size: 1rem;
+}
+#submit{
+  padding: 10px 20px;
+  margin-top: 50px;
+  width: 50%;
+  background-color: green;
+  box-shadow: inset -3px -3px green;
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  font-size: 1rem;
+}
+#submit:hover{
+  cursor:pointer;
+  background-color:aqua;
+  color:aqua;
+
+}
+
+    </style>
+</head>
+<body>
+    <form action='/predict' method="post" class="form">
+        <h1> Air Quality Index Prediction</h1>
+        <input type="number" name="so2" class="box" step="0.1" placeholder="so2">
+        <input type="number" name="no2" class="box" step="0.1" placeholder="no2">
+        <input type="number" name="rspm" class="box" step="0.1" placeholder="rspm">
+        <input type="number" name="spm" class="box" step="0.1" placeholder="spm">
+        <button type="submit" id="submit">Predict</button>
+    <p align="center",color='green'>{{a}}</p>
+    </form>
+
+
+</body>
+</html>
